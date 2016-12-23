@@ -1,0 +1,8 @@
+# Common editors
+.vscode
+
+# Ignore folders
+node_modules/
+build/
+typings/
+ts-node/

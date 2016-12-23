@@ -1,0 +1,25 @@
+{
+  "name": "test-project",
+  "version": "0.1.0",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "typings install",
+    "start": "ts-node app/index.ts",
+    "dev": "NODE_ENV=dev ts-node app/index.js",
+    "watch": "NODE_ENV=dev nodemon --watch app -e ts --exec 'ts-node app/index.ts'"
+  },
+  "dependencies": {
+    "config": "^1.21.0",
+    "injectable": "0.0.1",
+    "inversify": "^2.0.1",
+    "pg": "^6.1.0",
+    "reflect-metadata": "^0.1.8",
+    "restify": "^4.1.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "ts-node": "^1.6.0"
+  }
+}

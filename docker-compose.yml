@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    web:
+        build: .
+        command: npm run watch
+        container_name: node_test
+        image: node:6.5
+        volumes:
+          - .:/microservice
+          - ./node_modules:/microservice/node_modules
+        links:
+          - db
+        ports:
+          - 127.0.0.1:8080:8080
+    db:
+        image: postgres
+        environment:
+            POSTGRES_PASSWORD: password
+            POSTGRES_USER: root
